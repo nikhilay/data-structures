@@ -1,0 +1,12 @@
+package linkedlist;
+
+public class LList {
+
+	public static void main(String[] args) {
+		linkedlistmethods node=new linkedlistmethods();
+		node.insertFirst("Harry potter", 1000);
+		node.display();
+
+	}
+
+}

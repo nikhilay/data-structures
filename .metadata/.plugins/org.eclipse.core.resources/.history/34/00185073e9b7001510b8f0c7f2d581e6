@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc= new Scanner(System.in);
+        System.out.println("enter no");
+        int arraylength= sc.nextInt();
+        
+        
+        while(constraintone(arraylength)==false){
+            System.out.println("Please enter a number between 1 and 1000");
+            arraylength= sc.nextInt();
+            constraintone(arraylength);
+        }
+        
+      System.out.println("reached");
+        
+            }
+    
+    public  static boolean constraintone(int arrayl){
+        if(!(arrayl>=1 && arrayl<=1000)){
+            return false;
+        }else{ return true;}
+    }
+}

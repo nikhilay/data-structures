@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+
+public class sparseArrays {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int strlines=sc.nextInt();
+        while(!(strlines>=1 && strlines<=1000)){
+        	strlines=sc.nextInt();
+        }
+	    sc.nextLine();
+	    String[] input=new String[strlines];
+	    for(int i=0;i<strlines;i++){
+	    	while(sc.nextLine().length()<=20 && sc.nextLine().length()>=1){
+	    	input[i]=sc.nextLine();
+	    	}
+	    }
+	
+	   int queryno=sc.nextInt();
+	   while(!(queryno>=1 && queryno<=1000)){
+		   queryno=sc.nextInt();
+       }
+	   sc.nextLine();
+	   int[] readthis= new int[queryno];
+	   int temp=0;
+	   String[] queries= new String[queryno];
+	   for(int i=0;i<queryno;i++){
+		   while(sc.nextLine().length()<=20 && sc.nextLine().length()>=1){
+		  queries[i]=sc.nextLine();
+		   }
+	   }
+	   
+	   for(int i=0;i<queries.length;i++)
+	   {
+		   for(int j=0;j<input.length;j++)
+		   {
+			   if(queries[i].equals(input[j])){
+				   temp=temp+1;
+			   }
+		   }
+		   readthis[i]=temp;
+		   temp=0;
+	   }
+	   for(int i=0;i<readthis.length;i++){
+		   System.out.println(readthis[i]);
+	   }
+	
+	}
+	
+
+}

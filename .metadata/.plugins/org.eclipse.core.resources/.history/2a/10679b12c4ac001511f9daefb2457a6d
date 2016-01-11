@@ -1,0 +1,17 @@
+package sorting;
+
+public class InsertionSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Vamshi");
+		InsertionSort a = new InsertionSort();
+		a.insertionSort();
+	}
+	
+	public static void insertionSort()
+	{
+		System.out.println("yo");
+	}
+
+}

@@ -1,0 +1,11 @@
+package linkedlist;
+
+public class linkedListNode {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+

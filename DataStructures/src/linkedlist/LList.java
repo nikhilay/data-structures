@@ -1,0 +1,17 @@
+package linkedlist;
+
+public class LList {
+
+	public static void main(String[] args) {
+		linkedlistmethods node=new linkedlistmethods();
+		node.insertFirst("Harry potter", 1000);
+		node.insertFirst("CLRS", 300);
+		node.insertFirst("Apple", 600);
+		System.out.println(node.find("CLRS").bookname +" was found");
+       // node.find("CLRKJNKS");
+        //node.display();
+        //node.removelink("Harry potterb");
+        //node.display();
+	}
+
+}

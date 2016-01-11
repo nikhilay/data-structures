@@ -1,0 +1,37 @@
+
+public class stack {
+	private int stacksize;
+	private int topofthestack;
+	private String[] stackarray;
+	
+	stack(int size)
+	{
+		stacksize=size;
+		stackarray=new String[stacksize];
+	}
+	public void push( String input)
+	{ if(topofthestack+1<stacksize)
+	   {
+		stackarray[topofthestack+1]=input;
+		topofthestack++;
+		System.out.println(input+" has been added at " + topofthestack);
+	   }else
+	     {System.out.println("Sorry, stack is full!!");}
+	}
+	
+	public String pop(){
+		
+		if(topofthestack>=0)
+		{ return stackarray[topofthestack];
+			stackarray[topofthestack]="-1";
+		   topofthestack--;
+		}else{System.out.println("Sorry, stack is empty!!");}
+		
+		//return stackarray[topofthestack];
+		}
+	public static void main(String[] args) {
+
+
+	}
+
+}
