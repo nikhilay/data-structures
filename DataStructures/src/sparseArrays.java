@@ -35,7 +35,6 @@ public class sparseArrays {
 		  break;
 		   }
 	   }
-	   
 	   for(int i=0;i<queries.length;i++)
 	   {
 		   for(int j=0;j<input.length;j++)

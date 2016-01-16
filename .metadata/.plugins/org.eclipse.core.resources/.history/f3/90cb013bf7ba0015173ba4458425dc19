@@ -1,0 +1,101 @@
+
+public class hackerankll {
+	int data;
+	hackerankll next;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+hackerankll head=new hackerankll();
+
+head = head.Insert(head,2);
+head.Insert(head,3);
+head.Print(head);
+	}
+	
+	
+	hackerankll Delete(hackerankll head, int position) {
+		  // Complete this method
+		    int temp=0;
+		    hackerankll current=head;
+		    hackerankll previous=head;
+		    if(!(head==null)){
+		      if(head.next==null&& position==0){
+		          head=null;
+		          return head;
+		          
+		      }else{temp=1;
+		            current=current.next;
+		        while(true){
+		            if(temp==position&&current.next!=null){
+		                previous.next=current.next;
+		                return head;
+		            }else if(temp==position&&current.next==null)
+		            { previous.next=null;
+		            return head;
+		            }
+		            temp++;
+		            previous=current;
+		            current=current.next;
+		        }
+		       
+		      } 
+		    }
+		
+		}
+	
+	hackerankll Insert(hackerankll head,int data) {
+		// This is a "method-only" submission. 
+		// You only need to complete this method. 
+		hackerankll temp= new hackerankll();
+		    if(head==null){
+		        head.data=data;
+		        head.next=null;
+		        return head;
+		        }else{
+		        temp.data=data;
+		        temp.next=head;
+		        head=temp;
+		        return head;
+		    }
+		    }
+		    
+	hackerankll InsertLast(hackerankll head,int data) {
+		// This is a "method-only" submission. 
+		// You only need to complete this method. 
+		hackerankll temp= new hackerankll();
+		hackerankll traverse=head;
+		    if(head==null){
+		        head.data=data;
+		        head.next=null;
+		        return head;
+		        }
+		    else{while(!(traverse.next==null))
+		    {
+		    	traverse=traverse.next;
+		    }
+		        temp.data=data;
+		        traverse.next=temp;
+		        temp.next=null;
+		        return head;
+		    }
+		    }
+		    
+	
+	
+		
+	
+	void Print(hackerankll head) {
+	    hackerankll temp=head;
+	    if(temp==null){
+	        System.out.println("");
+	       }else{
+	        while(!(temp==null)){
+	            System.out.println(temp.data);
+	            temp=temp.next;
+	        }
+	    }
+	  
+	  
+	}
+
+}

@@ -1,0 +1,45 @@
+
+public class hackerankll {
+	int data;
+	hackerankll next;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+hackerankll head=new hackerankll();
+head.Insert(head,2);
+	}
+	
+	hackerankll Insert(hackerankll head,int data) {
+		// This is a "method-only" submission. 
+		// You only need to complete this method. 
+		hackerankll temp= new hackerankll();
+		    if(head==null){
+		        head.data=data;
+		        head.next=null;
+		        return head;
+		        }else{
+		        temp.data=data;
+		        temp.next=head;
+		        head=temp;
+		        return head;
+		    }
+		    }
+		    
+		  
+		
+	
+	void Print(hackerankll head) {
+	    
+	    if(head==null){
+	        System.out.println("");
+	       }else{
+	        while(!(head==null)){
+	            System.out.println("head.data");
+	            head=head.next;
+	        }
+	    }
+	  
+	  
+	}
+
+}

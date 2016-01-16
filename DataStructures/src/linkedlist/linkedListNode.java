@@ -7,7 +7,7 @@ public class linkedListNode {
 		
 		public linkedListNode next;
 		
-		public linkedListNode(String bookname, int millionsold){
+		linkedListNode(String bookname, int millionsold){
 			
 			this.bookname= bookname;
 			this.millionSold= millionsold;
