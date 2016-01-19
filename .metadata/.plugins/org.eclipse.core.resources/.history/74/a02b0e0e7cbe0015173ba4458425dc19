@@ -16,7 +16,7 @@ public class TreesMethods {
 		input.add("pom",60);
 		//input.inorder(input.root);
 		//System.out.println(treeHeight.treeDepth(input.root));
-		levelOrder.levelOrderTraverse(input.root);
+		input.levelOrder(input.root);
 		
 		
 		
@@ -142,7 +142,20 @@ public class TreesMethods {
 			
 		}
 	    
-
+  public void levelOrder(NodeTrees root){
+	  NodeTrees focusnode=root;
+	  NodeTrees temp;
+	  Queue<NodeTrees> inp = new LinkedList<NodeTrees>();
+	  if(focusnode!=null){
+	      inp.add(focusnode);
+	      if(!inp.isEmpty()){
+		     temp=inp.remove();
+		     System.out.print(temp.salary +" ");
+		    inp.add(temp.leftchild);
+		    inp.add(temp.rightchild);  
+         }
+	  }
+    }
 	
 	
 		

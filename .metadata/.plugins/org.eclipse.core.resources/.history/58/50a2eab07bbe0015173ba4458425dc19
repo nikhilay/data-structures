@@ -1,5 +1,4 @@
 package trees;
-import java.util.*;
 
 public class TreesMethods {
 	NodeTrees root;
@@ -15,8 +14,7 @@ public class TreesMethods {
 		input.add("mom",45);
 		input.add("pom",60);
 		//input.inorder(input.root);
-		//System.out.println(treeHeight.treeDepth(input.root));
-		levelOrder.levelOrderTraverse(input.root);
+		System.out.println(treeHeight.treeDepth(input.root));
 		
 		
 		
@@ -143,10 +141,9 @@ public class TreesMethods {
 		}
 	    
 
-	
-	
 		
- }
+		
+	   }
 	
 	
 	
