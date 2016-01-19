@@ -1,0 +1,100 @@
+package trees;
+
+public class TreesMethods {
+	NodeTrees root;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		TreesMethods input = new TreesMethods();
+		
+		
+		
+		input.add("tom",25);
+		//input.add("dad",55);
+		//input.add("mom",45);
+		//input.add("pom",60);
+		//input.preorder(input.root);
+		
+		
+		
+	}
+	
+	
+	public void add(String nam, int inp){
+		NodeTrees newnode= new NodeTrees(inp,nam);
+		NodeTrees focusnode,parent=new NodeTrees();
+		
+        focusnode=root;
+		
+		if(root==null){
+			root=newnode;
+		}
+		else
+		{
+			while(focusnode!=null)
+		      {
+			       if(newnode.salary<focusnode.salary){
+			       parent=focusnode;
+			       focusnode=focusnode.leftchild;
+			            if(focusnode==null){
+			                parent.leftchild=newnode;
+			                return;
+			              }
+			        }else{
+			         parent=focusnode;
+			         focusnode=focusnode.rightchild;
+			         if(focusnode==null){
+			                parent.rightchild=newnode;
+			                return;
+			              }
+			       }
+		      }
+		}
+		         
+      }
+	
+	
+	public void preorder(NodeTrees focusnode){
+		if(focusnode!=null){
+		System.out.println(focusnode.name+" Salary is "+ focusnode.salary);
+	    preorder(focusnode.leftchild);
+		preorder(focusnode.rightchild);
+	    }	
+	}
+	
+	public void postorder(NodeTrees focusnode){
+		if(focusnode!=null){
+	    postorder(focusnode.leftchild);
+		postorder(focusnode.rightchild);
+		System.out.println(focusnode.name+" Salary is "+ focusnode.salary);
+	    }	
+	}
+	
+	public void inorder(NodeTrees focusnode){
+		if(focusnode!=null){
+	    inorder(focusnode.leftchild);
+	    System.out.println(focusnode.name+" Salary is "+ focusnode.salary);
+		inorder(focusnode.rightchild);
+		
+	    }	
+	}
+	
+	public void findNode(NodeTrees focusnode,int key){
+		while(focusnode!=null){
+		if(key==focusnode.salary){
+			System.out.println("Has been found !!");
+			return;
+		}else if(key<focusnode.salary){
+			focusnode=focusnode.leftchild;
+		}else{
+			focusnode=focusnode.rightchild;
+		}
+		
+	    }
+	 System.out.print(" Has been not found !!");
+	 return;
+	}
+	
+	}
+
+
