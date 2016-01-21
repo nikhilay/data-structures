@@ -16,9 +16,11 @@ public class TreesMethods {
 		input.add("pom",60);
 		//input.inorder(input.root);
 		//System.out.println(treeHeight.treeDepth(input.root));
-		levelOrder.levelOrderTraverse(input.root);
-		
-		
+		//levelOrder.levelOrderTraverse(input.root);
+		//System.out.println(diameter.width(input.root));
+		//inorderWithoutRecursion.inorderstack(input.root);
+		//printAncestors.ancestors(input.root, 45);
+		KdistanceFromRoot.kNode(input.root, 2);
 		
 	}
 	
