@@ -20,7 +20,8 @@ public class TreesMethods {
 		//System.out.println(diameter.width(input.root));
 		//inorderWithoutRecursion.inorderstack(input.root);
 		//printAncestors.ancestors(input.root, 45);
-		KdistanceFromRoot.kNode(input.root, 2);
+		//KdistanceFromRoot.kNode(input.root, 2);
+		KsmallElement.inorderstack(input.root, 3);
 		
 	}
 	

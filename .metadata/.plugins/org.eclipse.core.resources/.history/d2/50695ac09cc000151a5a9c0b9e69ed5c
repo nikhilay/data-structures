@@ -1,0 +1,40 @@
+package trees;
+
+import java.util.Stack;
+
+public class KsmallElement {
+
+	static public void inorderstack(NodeTrees root, int k){
+		NodeTrees focusnode=root;
+		NodeTrees temp;
+		int i=0;
+		Stack<NodeTrees> inp= new Stack<NodeTrees>();
+		if(focusnode!=null){
+		inp.add(focusnode);
+		while(focusnode.leftchild!=null){
+			focusnode=focusnode.leftchild;
+			inp.add(focusnode);
+		}
+		}else{return;}
+		
+		while(!inp.isEmpty()){
+		i=i+1;
+		temp=inp.pop();
+		if(i==k){System.out.print(temp.salary); return;}
+		if(temp.rightchild==null){
+		      //System.out.print(temp.salary+" ");
+		   }else{
+			  // System.out.print(temp.salary+" ");
+			   temp=temp.rightchild;
+			   inp.add(temp);
+		    while(temp.leftchild!=null){
+		    	temp=temp.leftchild;
+				inp.add(temp);
+			 }
+		   }
+		}
+	
+	}
+	
+	
+}

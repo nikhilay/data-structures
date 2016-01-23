@@ -1,0 +1,23 @@
+package ctc;
+
+public class CompressUsingCounts {
+
+	 
+	public static void main(String[] args) { 
+	String str="djsghdassssjs".toLowerCase();
+	String output="";
+	Integer[] count=new Integer[26];
+	for(int i=0;i<str.length();i++){
+		int position=(int)str.charAt(i)-(int)'a';
+		count[position]++;
+	  }
+	 
+	for(int j=0;j<str.length();j++){
+		 output=output+str.charAt(j);
+		 int position=(int)str.charAt(j)-(int)'a';
+		 output=output+String.valueOf(count[position]);
+	  }
+	
+	System.out.print(output);
+	}  
+}

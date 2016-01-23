@@ -1,0 +1,25 @@
+package ctc;
+
+public class ReplaceSpace {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     String str="dhsudh hdjshd                                ";
+     char[] a=str.toCharArray();
+     
+     String str1=str.trim();
+     char[] b=str1.toCharArray();
+     int space=0;
+     for(int i=0;i<b.length;i++){
+    	 if(b[i]==' '){
+    		 space++;
+    	 }
+     }
+     System.out.println(space);
+     System.out.println(str.length());
+     System.out.println(str1.length());
+     
+     int length=str.length();
+	}
+
+}

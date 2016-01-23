@@ -1,0 +1,48 @@
+package ctc;
+
+public class Anagaram {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str1="god";
+		String str2="dog";
+		
+		checkAnagram(str1,str2);
+
+	}
+	
+	static public void checkAnagram(String str1,String str2){
+		if(str1.length()!=str2.length()){
+			System.out.println(" False ");
+			return;
+		}
+		if(str1.length()==0 || str2.length()!=0){
+			System.out.println(" False");
+			return;
+		}else if(str1.length()!=0 || str2.length()==0){
+			System.out.println(" False");
+			return;
+		}
+		
+		int[] count=new int[26];
+		
+		for(int i=0;i<str1.length();i++){
+			int position1=str1.charAt(i)-(int)'a';
+			int position2=str2.charAt(i)-(int)'a';
+			count[position1]++;
+			count[position2]--;
+			
+		}
+		
+		for(int j=0;j<count.length;j++){
+			if(count[j]!=0){
+				System.out.println(" Not an Anagram");
+				return;
+			}
+		}
+		
+		System.out.println(" Anagram");
+		
+	}
+
+}

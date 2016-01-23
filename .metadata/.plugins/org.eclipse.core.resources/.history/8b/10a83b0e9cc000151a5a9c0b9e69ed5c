@@ -1,0 +1,158 @@
+package trees;
+import java.util.*;
+
+public class TreesMethods {
+	NodeTrees root;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		TreesMethods input = new TreesMethods();
+		
+		
+		
+		input.add("tom",25);
+		input.add("dad",55);
+		input.add("mom",45);
+		input.add("pom",60);
+		//input.inorder(input.root);
+		//System.out.println(treeHeight.treeDepth(input.root));
+		//levelOrder.levelOrderTraverse(input.root);
+		//System.out.println(diameter.width(input.root));
+		//inorderWithoutRecursion.inorderstack(input.root);
+		//printAncestors.ancestors(input.root, 45);
+		KdistanceFromRoot.kNode(input.root, 2);
+		
+	}
+	
+	
+	public void add(String nam, int inp){
+		NodeTrees newnode= new NodeTrees(inp,nam);
+		NodeTrees focusnode,parent=new NodeTrees();
+		
+        focusnode=root;
+		
+		if(root==null){
+			root=newnode;
+		}
+		else
+		{
+			while(focusnode!=null)
+		      {
+			       if(newnode.salary<focusnode.salary){
+			       parent=focusnode;
+			       focusnode=focusnode.leftchild;
+			            if(focusnode==null){
+			                parent.leftchild=newnode;
+			                return;
+			              }
+			        }else{
+			         parent=focusnode;
+			         focusnode=focusnode.rightchild;
+			         if(focusnode==null){
+			                parent.rightchild=newnode;
+			                return;
+			              }
+			       }
+		      }
+		}
+		         
+      }
+	
+	
+	public void preorder(NodeTrees focusnode){
+		if(focusnode!=null){
+		System.out.println(focusnode.name+" Salary is "+ focusnode.salary);
+	    preorder(focusnode.leftchild);
+		preorder(focusnode.rightchild);
+	    }	
+	}
+	
+	public void postorder(NodeTrees focusnode){
+		if(focusnode!=null){
+	    postorder(focusnode.leftchild);
+		postorder(focusnode.rightchild);
+		System.out.println(focusnode.name+" Salary is "+ focusnode.salary);
+	    }	
+	}
+	
+	public void inorder(NodeTrees focusnode){
+		if(focusnode!=null){
+	    inorder(focusnode.leftchild);
+	    System.out.println(focusnode.name+" Salary is "+ focusnode.salary);
+		inorder(focusnode.rightchild);
+		
+	    }	
+	}
+	
+	public void findNode(NodeTrees focusnode,int key){
+		while(focusnode!=null){
+		if(key==focusnode.salary){
+			System.out.println("Has been found !!");
+			return;
+		}else if(key<focusnode.salary){
+			focusnode=focusnode.leftchild;
+		}else{
+			focusnode=focusnode.rightchild;
+		}
+		
+	    }
+	 System.out.print(" Not found !!");
+	 return;
+	}
+	
+	public void removeNode(int inp){
+		NodeTrees focusnode=root;
+		NodeTrees parent,temp;
+		parent=focusnode;
+		if(inp==root.salary){
+			focusnode=focusnode.rightchild;
+			while(focusnode.leftchild!=null){
+				parent=focusnode;
+				focusnode=focusnode.leftchild;
+			}
+			parent.leftchild=null;
+			root.name=focusnode.name;
+			root.salary=focusnode.salary;
+			return;
+		}
+	 int i=0;
+		while(focusnode!=null){
+			if (inp<focusnode.salary){
+			parent=focusnode;
+			focusnode=focusnode.leftchild;
+			i=0;
+		     }else if (inp>focusnode.salary){
+		    	 parent=focusnode;
+		    	 focusnode=focusnode.rightchild;
+		    	 i=1;
+		     }else{temp= focusnode;
+		            if(focusnode.rightchild==null){
+		            	if(i==0){ parent.leftchild=focusnode.leftchild;return;
+		            	}else if(i==1){parent.rightchild=focusnode.leftchild;return;} 
+		              }
+		    	    focusnode=focusnode.rightchild;
+		            while(focusnode.leftchild!=null){
+					parent=focusnode;
+					focusnode=focusnode.leftchild;
+				     }
+		            parent.leftchild=null;
+		            temp.name=focusnode.name;
+		            temp.salary=focusnode.salary;
+		            return;
+		             }    
+		     }
+			
+		}
+	    
+
+	
+	
+		
+ }
+	
+	
+	
+	
+	
+
+

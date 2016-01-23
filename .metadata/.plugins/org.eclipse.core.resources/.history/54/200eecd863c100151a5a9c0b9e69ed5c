@@ -1,0 +1,30 @@
+package ctc;
+import java.util.*;
+
+public class ZeroInMatrix {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[][] a=new int[4][5];
+		HashSet<Integer> setR= new HashSet<Integer>();
+		HashSet<Integer> setC= new HashSet<Integer>();
+		for(int i=0;i<a.length;i++){
+			for(int j=0;j<a[0].length;j++){
+				if(a[i][j]==0){
+					setR.add(i);
+					setC.add(j);
+				 }
+			  }
+		 }
+		Iterator i = setR.iterator();
+		while(i.hasNext()){
+				int j = (int) i.next();
+				a[j][i]=0;
+			}
+		}
+
+	}
+	
+	
+
+}

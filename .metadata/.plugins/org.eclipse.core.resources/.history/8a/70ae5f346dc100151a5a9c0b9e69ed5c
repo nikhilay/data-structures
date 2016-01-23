@@ -1,0 +1,27 @@
+package ctc;
+
+public class CompressUsingCounts {
+
+	 
+	public static void main(String[] args) { 
+	String str="nikhghghghghhhhhhhl".toLowerCase();
+	String output="";
+	int count=1;
+	StringBuffer sbuff= new StringBuffer(); 
+	char temp=str.charAt(0);
+	sbuff.append(temp);
+	for(int i=1;i<str.length();i++){
+		if(temp==str.charAt(i)){
+			count++;
+			if(i==str.length()-1){sbuff.append(String.valueOf(count)); break;}
+		}else{sbuff.append(String.valueOf(count));
+			temp=str.charAt(i);
+			sbuff.append(temp);
+		      count=1;
+		      if(i==str.length()-1){sbuff.append(String.valueOf(count)); break;}
+		}
+	  }
+	 
+    System.out.print(sbuff.toString().length()+" "+str.length());
+	}  
+}
