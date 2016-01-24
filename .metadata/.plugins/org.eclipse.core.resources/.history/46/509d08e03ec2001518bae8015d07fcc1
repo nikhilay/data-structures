@@ -1,0 +1,14 @@
+package ctcLinkedList;
+
+public class CircularListStartPoint {
+	
+	public void getStartPoint(Node firstnode){
+		Node focusnode=firstnode;
+		
+		if(focusnode==null){
+			return
+		}
+		
+	}
+
+}
