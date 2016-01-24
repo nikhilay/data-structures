@@ -26,13 +26,11 @@ public class Palindrome {
 				break;
 			}
 		  }
-		//System.out.println(slow.data);
+		System.out.println(slow.data);
 		while(!stk.isEmpty()){
-				
 		if(slow.data!=stk.pop()){
 			return false;
 		  } 
-		slow=slow.next;
 		}
 		return true;
 		

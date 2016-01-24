@@ -12,16 +12,12 @@ public class NodeMethods {
    NodeMethods list2= new NodeMethods();
    NodeMethods result= new NodeMethods();
    
-      list1.insertFirst(1);
-      list1.insertFirst(2);
-      list1.insertFirst(3);
-      list1.insertFirst(2);
-      list1.insertFirst(1);
-      System.out.println(Palindrome.check(list1.firstnode));
-      list2.insertFirst(5);
-     //list2.insertFirst(3);
+      list1.insertFirst(9);
+      list1.insertFirst(8);
       //list2.insertFirst(5);
-      //result.firstnode=ReverseOrderAddition.AdditionLL(list1.firstnode, list2.firstnode);
+     list2.insertFirst(3);
+      list2.insertFirst(5);
+      result.firstnode=ReverseOrderAddition.AdditionLL(list1.firstnode, list2.firstnode);
        
       while(result.firstnode!=null){
     	  System.out.print(result.firstnode.data+" ");

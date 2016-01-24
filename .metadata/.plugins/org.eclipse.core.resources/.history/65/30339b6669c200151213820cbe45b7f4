@@ -18,7 +18,7 @@ public class NodeMethods {
       list1.insertFirst(2);
       list1.insertFirst(1);
       System.out.println(Palindrome.check(list1.firstnode));
-      list2.insertFirst(5);
+      //list2.insertFirst(5);
      //list2.insertFirst(3);
       //list2.insertFirst(5);
       //result.firstnode=ReverseOrderAddition.AdditionLL(list1.firstnode, list2.firstnode);
