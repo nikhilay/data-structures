@@ -1,0 +1,12 @@
+package ctcStacksAndQueues;
+
+public class ThreeStacks {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArrayStacks as= new ArrayStacks();
+     
+	}
+
+}

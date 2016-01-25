@@ -21,6 +21,7 @@ public class Palindrome {
 			stk.push(slow.data);
 			slow=slow.next;
 			fast=fast.next.next;
+			if(fast==null){break;}
 			if(fast.next==null){
 				slow=slow.next;
 				break;
