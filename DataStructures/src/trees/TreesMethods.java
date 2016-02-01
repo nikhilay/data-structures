@@ -2,7 +2,7 @@ package trees;
 import java.util.*;
 
 public class TreesMethods {
-	NodeTrees root;
+	public NodeTrees root;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -10,10 +10,10 @@ public class TreesMethods {
 		
 		
 		
-		input.add("tom",25);
-		input.add("dad",55);
-		input.add("mom",45);
-		input.add("pom",60);
+//		input.add("tom",25);
+//		input.add("dad",55);
+//		input.add("mom",45);
+//		input.add("pom",60);
 		//input.inorder(input.root);
 		//System.out.println(treeHeight.treeDepth(input.root));
 		//levelOrder.levelOrderTraverse(input.root);

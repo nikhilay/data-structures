@@ -1,0 +1,22 @@
+package ctcStacksAndQueues;
+
+
+public class Node {
+	
+    char a;
+	int time;
+	Node next;
+	
+	public Node(char p,int d){
+		a=p;
+		time=d;
+		next=null;
+	}
+	
+	public void display(){
+		if(a=='d'){
+		System.out.println(" Dog arrival time is " + time);
+		}else{System.out.println(" Cat arrival time is " + time);}
+	}
+	
+}

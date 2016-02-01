@@ -2,9 +2,9 @@ package trees;
 
 public class NodeTrees {
     
-	int salary;
-	String name;
-	NodeTrees leftchild,rightchild;
+	public int salary;
+	public String name;
+	public NodeTrees leftchild,rightchild;
 	
 	NodeTrees(int value, String name){
 		this.name=name;

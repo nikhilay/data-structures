@@ -1,0 +1,26 @@
+package ctcStacksAndQueues;
+
+public class MinInO1CTCStacks extends NodeMethods{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MinInO1CTCStacks list1= new MinInO1CTCStacks();
+		list1.push(7);
+		
+	}
+	
+	public void push(int value){
+		int newmin=Math.min(value, mini());
+		super.insertFirst(value, newmin);
+		}
+	
+	static public int mini(){
+		return 5;
+//		if(t){
+//			
+//		}else{
+//			int temp=
+//		}
+	}
+
+}

@@ -43,13 +43,13 @@ public class ArrayStacks {
         	} else{System.out.println(" Stack is empty");}
       }
 	
-     public int pop(){
+     public void pop(){
      	if(topofthestack>=0){
-     		int temp=a[topofthestack];
+     		
      	  System.out.println(a[topofthestack]+" is the element ");
      	  topofthestack--;
-     	  return temp;
+     	  
      	} 
-     	return null;
+     	
       }
 }
