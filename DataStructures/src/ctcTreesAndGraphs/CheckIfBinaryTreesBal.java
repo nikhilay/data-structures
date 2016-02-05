@@ -7,14 +7,14 @@ public class CheckIfBinaryTreesBal {
 	
 	static public void main(String[] args){
 		TreesMethods input = new TreesMethods();
-		input.add("tom",25);
-		input.add("dad",55);
-		input.add("mom",45);
+		input.add("tom",6);
+		input.add("dad",4);
+		input.add("mom",5);
 		//input.add("pom",60);
-		input.add("wqw", 20);
-		input.add("pomqw",10);
-		input.add("pomqw",5);
-		input.add("pomqw",1);
+		input.add("wqw", 3);
+		input.add("pomqw",2);
+		//input.add("pomqw",5);
+		//input.add("pomqw",1);
 		//input.add("wqqwqww", 90);
 		check(input.root);
 	}
