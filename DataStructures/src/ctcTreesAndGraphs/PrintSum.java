@@ -12,7 +12,7 @@ public class PrintSum {
 		//input.add("pom",6);
 		input.add("wqw", 3);
 		input.add("pomqw",2);
-		//input.add("pomqw",5);
+		input.add("pomqw",9);
 		findpath(input.root,sum,path,level);
 	}
 	

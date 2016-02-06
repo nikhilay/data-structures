@@ -15,7 +15,7 @@ public class CheckIfBinaryTreesBal {
 		input.add("pomqw",2);
 		//input.add("pomqw",5);
 		//input.add("pomqw",1);
-		//input.add("wqqwqww", 90);
+		input.add("wqqwqww", 9);
 		check(input.root);
 	}
 	
