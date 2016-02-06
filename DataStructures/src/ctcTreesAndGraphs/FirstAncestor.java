@@ -18,27 +18,27 @@ public class FirstAncestor {
 	}
 	
 	   static public void firstAncest(NodeTrees root, int node1, int node2){
-		   boolean check1=false;
-		   boolean check2=false;
-		   boolean check3=false;
-		   boolean check4=false;
+		   boolean node1InLeftTree=false;
+		   boolean node2InRightTree=false;
+		   boolean node2InLeftTree=false;
+		   boolean node1InRightTree=false;
 		if(root==null){
 			System.out.println(" Trees is Empty !!");
 			return;
 		}else{
-			check1=findNode(root.leftchild,node1);
-			check2=findNode(root.rightchild,node2);
-			check3=findNode(root.leftchild,node2);
-			check4=findNode(root.rightchild,node1);
-			if((root.salary==node1 &&(check2||check3))||(root.salary==node2&&(check1||check4))){
+			node1InLeftTree=findNode(root.leftchild,node1);
+			node2InRightTree=findNode(root.rightchild,node2);
+			node2InLeftTree=findNode(root.leftchild,node2);
+			node1InRightTree=findNode(root.rightchild,node1);
+			if((root.salary==node1 &&(node2InRightTree||node2InLeftTree))||(root.salary==node2&&(node1InLeftTree||node1InRightTree))){
 				System.out.println(" First Common ancestor is "+root.salary);
 				return;
-			}else if((check1 &&check2)||(check3 &&check4)){
+			}else if((node1InLeftTree && node2InRightTree)||(node2InLeftTree &&node1InRightTree)){
 				System.out.println(" First Common ancestor is "+root.salary);
 				return;
-			}else if(check1&&check3){
+			}else if(node1InLeftTree&&node2InLeftTree){
 				firstAncest(root.leftchild,node1,node2);
-			}else if(check2&&check4){
+			}else if(node2InRightTree&&node1InRightTree){
 				firstAncest(root.rightchild,node1,node2);
 			}else{
 				System.out.println(" Elements not found ");
