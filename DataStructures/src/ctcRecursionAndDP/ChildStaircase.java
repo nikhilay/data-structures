@@ -1,10 +1,18 @@
 package ctcRecursionAndDP;
 
+import java.sql.Timestamp;
+import java.util.Date;
+//import java.sql.Timestamp;
+
 public class ChildStaircase {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-       System.out.println(" Total number of ways child can hop to reach end "+ paths(3));
+		long start = System.nanoTime();
+       System.out.println(" Total number of ways child can hop to reach end "+ paths(30));
+       long end = System.nanoTime();
+       long microseconds = (end - start);
+       System.out.println(microseconds);
 	}
 //	static public int totalPaths(int sum){
 //		int add1=paths(sum,1);

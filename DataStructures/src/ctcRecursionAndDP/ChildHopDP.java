@@ -1,11 +1,17 @@
 package ctcRecursionAndDP;
+import java.sql.Timestamp;
+import java.util.Date;
 
 public class ChildHopDP {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] check= new int[6];
-		System.out.println(" Total number of ways child can hop to reach end "+ paths(3,check));
+		int[] check= new int[21];
+		long start = System.nanoTime();
+		System.out.println(" Total number of ways child can hop to reach end "+ paths(20,check));
+		 long end = System.nanoTime();
+	       long microseconds = (end - start);
+	       System.out.println(microseconds);
 	}
 	static public int paths(int sum,int[] check){
 		if(sum==0){
