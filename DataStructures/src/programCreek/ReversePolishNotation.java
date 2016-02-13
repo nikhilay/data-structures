@@ -14,25 +14,23 @@ public class ReversePolishNotation {
 			System.out.println(" Empty Array");
 		}else{Stack<Integer> stk= new Stack<Integer>();
 			   for(int i=0;i<input.length;i++){
-//				   int a=Integer.parseInt(input[i]);
-//				   int b=Integer.parseInt(input[i+1]);
 				   if(input[i]!="+"&&input[i]!="-"&&input[i]!="*"&&input[i]!="/"){
 				       stk.push(Integer.parseInt(input[i]));
 				   }else{int a=stk.pop();
 		             int b=stk.pop();
 					   switch (input[i]){
 					   case "+": 
-					             stk.push(a+b);
-					             break;
+					            stk.push(a+b);
+					            break;
 					   case "-": 
 			                   stk.push(a-b);
 			                   break;
 					   case "/": 
-		                   stk.push(a/b);
-		                   break;
+		                        stk.push(a/b);
+		                        break;
 					   case "*": 
-		                   stk.push(a*b);
-		                   break;
+		                       stk.push(a*b);
+		                       break;
 					   }
 				   
 				  
